@@ -1,0 +1,11 @@
+{
+  "name": "tg-subs-store",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  // يحافظ على المتغيرات التي تضيفها من لوحة Cloudflare عند كل نشر جديد
+  "keep_vars": true,
+  "durable_objects": {
+    "bindings": [{ "name": "STORE", "class_name": "Store" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Store"] }]
+}
